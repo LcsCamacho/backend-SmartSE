@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//Simulação de um posto de combústivel.
+//Com uma tabela de veículo e de abastecimento,
+//contendo um usuario que acessa e administra.
+
+model Usuario {
+  id    Int    @id @default(autoincrement())
+  cpf   String @unique
+  senha String
+}
+
+model Veiculo {
+  id             Int             @id @default(autoincrement())
+  placa          String          @unique
+  renavam        String          @unique
+  cor            String
+  potencia       String
+  ano            String
+  modelo         String
+  marca          String
+  abastecimentos Abastecimento[]
+}
+
+model Abastecimento {
+  id        Int      @id @default(autoincrement())
+  data      DateTime @default(now())
+  valor     Float
+  litros    Float
+  tipo      String
+  placa     String
+  veiculo   Veiculo  @relation(fields: [placa], references: [placa])
+}
