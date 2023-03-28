@@ -15,6 +15,6 @@ app.use(routerUsuario)
 app.use(routerAbastecimento)
 app.use(routerVeiculo)
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000')
+app.listen(3001, () => {
+    console.log('Server running on port 3001')
 });

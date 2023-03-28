@@ -1,1 +1,1 @@
-# setupNodeTS
+# Backend Typescript + Prisma + Docker + PostgreSQL
