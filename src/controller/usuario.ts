@@ -1,5 +1,15 @@
 import { Request, Response } from "express";
 import { prisma } from "../DAO/prismaConnect";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
+
+type token = {
+    cpf: string,
+    senha: string,
+    id?: number,
+    token?: string
+}
 
 export const inserir = async (req: Request, res: Response) => {
 
@@ -30,7 +40,25 @@ export const login = async (req: Request, res: Response) => {
 
     if (usuario) {
         //se a senha estiver correta
-        if (usuario.senha === senha) return res.status(200).json({ usuario: usuario }).end();
+        if (usuario.senha === senha) {
+            if (process.env.JWT_PRIVATE_KEY === undefined) {
+                return res.status(500).send('KEY não encontrada.').end();
+            }
+            let data: token = {
+                cpf: '',
+                senha: '',
+                token: ''
+            }
+            jwt.sign(data, process.env.JWT_PRIVATE_KEY, { expiresIn: '60m' }, (err, token) => {
+                if (!err) {
+                    data.token = token;
+                    res.status(200).json(data).end();
+                } else {
+                    console.log(err);
+                    res.status(404).json(err).end();
+                }
+            });
+        }
         
         return res.status(401).json({ error: "Senha incorreta" }).end();
     }
