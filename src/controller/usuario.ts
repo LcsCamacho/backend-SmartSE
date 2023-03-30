@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();
 
-type token = {
+type Usuario = {
     cpf: string,
     senha: string,
     id?: number,
@@ -21,8 +21,8 @@ export const inserir = async (req: Request, res: Response) => {
             senha: senha
         }
     })
-    
-    if (usuario) return res.status(200).json({usuario:usuario,message:"Inserido com sucesso!"}).end();
+
+    if (usuario) return res.status(200).json({ usuario: usuario, message: "Inserido com sucesso!" }).end();
 
     return res.status(400).json({ error: "Usuário não cadastrado" }).end();
 
@@ -41,30 +41,31 @@ export const login = async (req: Request, res: Response) => {
     if (usuario) {
         //se a senha estiver correta
         if (usuario.senha === senha) {
-            if (process.env.JWT_PRIVATE_KEY === undefined) {
+            if (!process.env.JWT_PRIVATE_KEY) {
                 return res.status(500).send('KEY não encontrada.').end();
             }
-            let data: token = {
-                cpf: '',
-                senha: '',
+            const data: Usuario = {
+                cpf: usuario.cpf,
+                senha: usuario.senha,
                 token: ''
             }
             jwt.sign(data, process.env.JWT_PRIVATE_KEY, { expiresIn: '60m' }, (err, token) => {
+                console.log({ err, token })
                 if (!err) {
-                    data.token = token;
-                    res.status(200).json(data).end();
+                    data.token = token
+                    console.log(data)
+                    return res.status(200).json(data).end();
                 } else {
-                    console.log(err);
-                    res.status(404).json(err).end();
+                    console.log(err)
+                    return res.status(404).json(err).end();
                 }
             });
         }
-        
-        return res.status(401).json({ error: "Senha incorreta" }).end();
+        else return res.status(401).json({ error: "Senha incorreta" }).end();
     }
 
     //se nao encontrar nenhum usuario com o cpf informado
-    return res.status(401).json({ error: "Usuário não encontrado" }).end();
+    else return res.status(401).json({ error: "Usuário não encontrado" }).end();
 
 }
 
