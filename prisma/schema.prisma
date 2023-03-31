@@ -33,11 +33,11 @@ model Veiculo {
 }
 
 model Abastecimento {
-  id        Int      @id @default(autoincrement())
-  data      DateTime @default(now())
-  valor     Float
-  litros    Float
-  tipo      String
-  placa     String
-  veiculo   Veiculo  @relation(fields: [placa], references: [placa])
+  id      Int      @id @default(autoincrement())
+  data    DateTime @default(now())
+  valor   Float
+  litros  Float
+  tipo    String
+  placa   String
+  veiculo Veiculo  @relation(fields: [id], references: [id])
 }

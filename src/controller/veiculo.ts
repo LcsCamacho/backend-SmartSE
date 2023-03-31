@@ -41,18 +41,16 @@ export const inserir = async (req: Request, res: Response) => {
 export const deletar = async (req: Request, res: Response) => {
 
     const { id } = req.params;
-
     try {
         const veiculo = await prisma.veiculo.delete({
             where: {
                 id: Number(id)
             }
         })
-    
         if (veiculo) return res.status(200).json(veiculo).end();
     
         //se nao encontrar nenhum veiculo com o id informado
-        return res.status(400).send("Veiculo nao encontrado").end();
+        return res.status(404).send("Veiculo nao encontrado").end();
     
     } catch (error) {
         return res.status(400).send("Erro ao deletar veiculo").end();
