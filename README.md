@@ -1,9 +1,12 @@
 # Backend Typescript + Prisma + Docker + PostgreSQL
 
-# Programas necessários: Docker, Node, Typescript, VSCode ou editor equivalente.
+# Projeto de estudo para criação de um backend utilizando Node, Typescript, Prisma, Docker e PostgreSQL.
+# Feito utilizando padrão MVC, com a utilização de middlewares para autenticação.
+
+
 
 # Tutorial
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Programas necessários: Docker, Node, Typescript, VSCode ou editor equivalente.
 # Passo 1: Instalar o Docker Desktop
     Sub-Passo 1: Baixar o Terminal no Microsoft Store
     Sub-Passo 2: Abrir o Terminal como administrador e digitar o comando: wsl --install -d Ubuntu-22.04
