@@ -15,10 +15,10 @@
     Sub-Passo 7: Abrir o Terminal e digitar o comando: docker ps
     Sub-Passo 8: Se aparecer a mensagem dos containeres ativos, o Docker está funcionando corretamente
 Documentações úteis
-*[https://docs.docker.com/docker-for-windows/wsl](https://docs.docker.com/docker-for-windows/wsl)
-*[https://docs.docker.com/engine/install/ubuntu](https://docs.docker.com/engine/install/ubuntu)
-*[https://docs.docker.com/compose/install](https://docs.docker.com/compose/install)
-*[https://learn.microsoft.com/en-us/windows/wsl/install](https://learn.microsoft.com/en-us/windows/wsl/install)
+[https://docs.docker.com/docker-for-windows/wsl](https://docs.docker.com/docker-for-windows/wsl)
+[https://docs.docker.com/engine/install/ubuntu](https://docs.docker.com/engine/install/ubuntu)
+[https://docs.docker.com/compose/install](https://docs.docker.com/compose/install)
+[https://learn.microsoft.com/en-us/windows/wsl/install](https://learn.microsoft.com/en-us/windows/wsl/install)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Passo 2: Alterar o nome do arquivo .env.example para .env
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -36,8 +36,8 @@ Documentações úteis
     Sub-Passo 3: Digitar Prisma
     Sub-Passo 4: Instalar a extensão Prisma
 Documentações úteis
-*[https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
-*[https://www.prisma.io/docs](https://www.prisma.io/docs)
+[https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres)
+[https://www.prisma.io/docs](https://www.prisma.io/docs)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Passo 8: Abrir o terminal na pasta e digitar `yarn prisma migrate dev`
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
