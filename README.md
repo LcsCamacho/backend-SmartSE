@@ -26,9 +26,9 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Passo 4: Inserir seus dados no arquivo .env (senha, usuario, porta, nome do banco e sua KEY de autenticação via jwt token) e no docker-compose.yml (usuario, senha, nome do banco de dados)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Passo 5: Abrir o terminal na pasta e digitar yarn ou npm install
+## Passo 5: Abrir o terminal na pasta e digitar `yarn` ou `npm install`
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Passo 6: Abrir o terminal na pasta e digitar docker-compose up -d
+## Passo 6: Abrir o terminal na pasta e digitar `docker-compose up -d`
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Passo 7: Instalar a extensão do Prisma 
     Sub-Passo 1: Abrir o VSCode
@@ -39,8 +39,11 @@
     <https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres>
     <https://www.prisma.io/docs>
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Passo 8: Abrir o terminal na pasta e digitar yarn prisma migrate dev
+## Passo 8: Abrir o terminal na pasta e digitar `yarn prisma migrate dev`
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Passo 9: Digitar yarn dev ou npm run dev
+## Passo 9: Digitar `yarn dev` ou `npm run dev`
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Finalizado!
+
+
+Para testes no insomnia, na pasta docs há o arquivo com os endpoints feitos, basta importar no insomnia e testar.
