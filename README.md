@@ -28,7 +28,9 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Passo 5: Abrir o terminal na pasta e digitar yarn ou npm install
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Passo 6: Instalar a extensão do Prisma 
+## Passo 6: Abrir o terminal na pasta e digitar docker-compose up -d
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Passo 7: Instalar a extensão do Prisma 
     Sub-Passo 1: Abrir o VSCode
     Sub-Passo 2: Clicar no botão de extensões
     Sub-Passo 3: Digitar Prisma
@@ -37,8 +39,8 @@
     <https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript-postgres>
     <https://www.prisma.io/docs>
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Passo 7: Abrir o terminal na pasta e digitar yarn prisma migrate dev
+## Passo 8: Abrir o terminal na pasta e digitar yarn prisma migrate dev
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Passo 8: Digitar yarn dev ou npm run dev
+## Passo 9: Digitar yarn dev ou npm run dev
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Finalizado!
