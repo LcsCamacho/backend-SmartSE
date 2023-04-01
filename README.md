@@ -3,7 +3,7 @@
 ## Projeto de estudo para criação de um backend utilizando Node, Typescript, Prisma, Docker e PostgreSQL.
 ## Feito utilizando padrão MVC, com a utilização de middlewares para autenticação.
 
-# Tutorial
+# Como começar
     Programas necessários: Docker, Node, Typescript, VSCode ou editor equivalente.
 ## Passo 1: Instalar o Docker Desktop
     Sub-Passo 1: Baixar o Terminal no Microsoft Store
