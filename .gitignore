@@ -3,3 +3,4 @@ package-lock.json
 .devcontainer
 .env
 docker-compose.yml
+yarn.lock
