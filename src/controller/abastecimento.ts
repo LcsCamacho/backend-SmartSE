@@ -86,8 +86,8 @@ export const atualizar = async (req: Request, res: Response) => {
             id: id
         },
         data: {
-            valor: valor,
-            litros: litros,
+            valor: Number(valor),
+            litros: Number(litros),
             tipo: tipo,
             placa: placa
         }
