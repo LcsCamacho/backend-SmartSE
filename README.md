@@ -11,13 +11,15 @@
 #  Sub-Passo 4: Baixar o Docker Desktop https://docs.docker.com/get-docker/
 #  Sub-Passo 5: Instalar o Docker Desktop
 #  Sub-Passo 6: Reiniciar o PC
-
+#  Sub-Passo 7: Abrir o Terminal e digitar o comando: docker ps
+#  Sub-Passo 8: Se aparecer a mensagem dos containeres ativos, o Docker está funcionando corretamente
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Passo 2: Alterar o nome do arquivo .env.example para .env
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Passo 3: Alterar o nome do arquivo docker-compose.yml.example para docker-compose.yml
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Passo 4: Inserir seus dados no arquivo .env (senha, usuario, porta, nome do banco e sua KEY de autenticação via jwt token) e no docker-compose.yml (usuario, senha, nome do banco de dados)
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Passo 5: Abrir o terminal na pasta e digitar yarn ou npm install
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Passo 6: Digitar yarn dev ou npm run dev
