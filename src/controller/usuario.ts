@@ -22,7 +22,7 @@ export const inserir = async (req: Request, res: Response) => {
                 senha: senha
             }
         })
-    
+
         if (usuario) return res.status(200).json({ usuario: usuario, message: "Inserido com sucesso!" }).end();
     } catch (error) {
         return res.status(400).json({ error: "Usuário não cadastrado" }).end();
@@ -42,7 +42,7 @@ export const login = async (req: Request, res: Response) => {
                 cpf: cpf
             }
         })
-    
+
         if (usuario) {
             //se a senha estiver correta
             if (usuario.senha === senha) {
@@ -81,7 +81,7 @@ export const login = async (req: Request, res: Response) => {
 export const listar = async (req: Request, res: Response) => {
     try {
         const usuarios = await prisma.usuario.findMany();
-    
+
         if (usuarios) return res.status(200).json({ usuarios: usuarios }).end();
     } catch (error) {
         return res.status(401).json({ error: "Nenhum usuário encontrado" }).end();

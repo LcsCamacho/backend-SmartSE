@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { prisma } from "../DAO/prismaConnect";
 
 export const listar = async (req: Request, res: Response) => {
-    
+
     try {
         const veiculos = await prisma.veiculo.findMany();
 
@@ -30,12 +30,12 @@ export const inserir = async (req: Request, res: Response) => {
                 renavam: renavam
             }
         })
-        
-        if (veiculo) return res.status(200).json({veiculo, message:"Inserido com sucesso"}).end();
+
+        if (veiculo) return res.status(200).json({ veiculo, message: "Inserido com sucesso" }).end();
     } catch (error) {
         return res.status(400).send("Erro ao inserir veiculo").end();
     }
-    
+
 }
 
 export const deletar = async (req: Request, res: Response) => {
@@ -48,21 +48,21 @@ export const deletar = async (req: Request, res: Response) => {
             }
         })
         if (veiculo) return res.status(200).json(veiculo).end();
-    
+
         //se nao encontrar nenhum veiculo com o id informado
         return res.status(404).send("Veiculo nao encontrado").end();
-    
+
     } catch (error) {
         console.log(error)
         return res.status(400).send("Erro ao deletar veiculo").end();
     }
-    
+
 }
 
 export const atualizar = async (req: Request, res: Response) => {
     const { id } = req.params;
     const { placa, marca, modelo, ano, cor, potencia, renavam } = req.body;
-    
+
     try {
         const veiculo = await prisma.veiculo.update({
             where: {
@@ -78,15 +78,15 @@ export const atualizar = async (req: Request, res: Response) => {
                 placa: placa
             }
         })
-    
+
         if (veiculo) return res.status(200).json(veiculo).end();
-    
+
         //se nao encontrar nenhum veiculo com o id informado
         return res.status(400).send("Veiculo nao encontrado").end();
-    
+
     } catch (error) {
         return res.status(400).send("Erro ao atualizar veiculo").end();
     }
-    
+
 }
 

@@ -26,7 +26,7 @@ export const buscarPorId = async (req: Request, res: Response) => {
 }
 
 export const buscarPorPlaca = async (req: Request, res: Response) => {
-    
+
     const { placa } = req.params;
 
     const abastecimento = await prisma.abastecimento.findMany({
@@ -53,9 +53,9 @@ export const inserir = async (req: Request, res: Response) => {
                 placa: placa
             }
         });
-    
-        if (abastecimento) return res.status(200).json({abastecimento, message:"Inserido com sucesso"}).end();
-        
+
+        if (abastecimento) return res.status(200).json({ abastecimento, message: "Inserido com sucesso" }).end();
+
     } catch (error) {
         return res.status(400).send("Erro ao inserir abastecimento").end();
     }
@@ -71,9 +71,9 @@ export const deletar = async (req: Request, res: Response) => {
                 id: Number(id)
             }
         })
-    
+
         if (abastecimento) return res.status(200).json(abastecimento).end();
-        
+
     } catch (error) {
         //se nao encontrar abastecimento com o id inserido
         return res.status(400).send("Erro ao deletar abastecimento").end();
@@ -96,9 +96,9 @@ export const atualizar = async (req: Request, res: Response) => {
                 placa: placa
             }
         })
-    
+
         if (abastecimento) return res.status(200).json(abastecimento).end();
-        
+
     } catch (error) {
         //se nao encontrar abastecimento com o id inserido
         return res.status(400).send("Erro ao atualizar abastecimento").end();
