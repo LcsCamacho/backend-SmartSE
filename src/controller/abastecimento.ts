@@ -48,8 +48,8 @@ export const inserir = async (req: Request, res: Response) => {
 
     const abastecimento = await prisma.abastecimento.create({
         data: {
-            valor: valor,
-            litros: litros,
+            valor: Number(valor),
+            litros: Number(litros),
             tipo: tipo,
             placa: placa
         }

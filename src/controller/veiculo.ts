@@ -53,6 +53,7 @@ export const deletar = async (req: Request, res: Response) => {
         return res.status(404).send("Veiculo nao encontrado").end();
     
     } catch (error) {
+        console.log(error)
         return res.status(400).send("Erro ao deletar veiculo").end();
     }
     
