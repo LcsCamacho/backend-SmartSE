@@ -1,7 +1,14 @@
 # Backend Typescript + Prisma + Docker + PostgreSQL
 
 ## Projeto de estudo para criação de um backend utilizando Node, Typescript, Prisma, Docker e PostgreSQL.
-## Feito utilizando padrão MVC, com a utilização de middlewares para autenticação.
+
+## Conteúdo
+* API CRUD de veiculos, abastecimento e usuario.
+* Autenticação utilizando JWT Token
+* Docker para subir o banco de dados PostgreSQL
+* Prisma como ORM para facilitar o processo de conexão com o banco de dados
+* Estrutura de pastas em MVC
+* Cors habilitado
 
 # Como começar
     Programas necessários: Docker, Node, Typescript, VSCode ou editor equivalente.
