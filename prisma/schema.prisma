@@ -15,9 +15,9 @@ datasource db {
 //contendo um usuario que acessa e administra.
 
 model Usuario {
-  id            Int         @id @default(autoincrement())
-  cpf           String      @unique
-  senha         String
+  id             Int         @id @default(autoincrement())
+  cpf            String      @unique
+  senha          String
 }
 
 model Veiculo {
