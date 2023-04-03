@@ -15,15 +15,15 @@ datasource db {
 //contendo um usuario que acessa e administra.
 
 model Usuario {
-  id    Int    @id @default(autoincrement())
-  cpf   String @unique
-  senha String
+  id            Int         @id @default(autoincrement())
+  cpf           String      @unique
+  senha         String
 }
 
 model Veiculo {
-  id             Int             @id @default(autoincrement())
-  placa          String          @unique
-  renavam        String          @unique
+  id             Int        @id @default(autoincrement())
+  placa          String     @unique
+  renavam        String     @unique
   cor            String
   potencia       String
   ano            String
@@ -33,11 +33,11 @@ model Veiculo {
 }
 
 model Abastecimento {
-  id         Int      @id @default(autoincrement())
-  data       DateTime @default(now())
-  valor      Float
-  litros     Float
-  tipo       String
-  placa      String
-  veiculo    Veiculo  @relation(fields: [placa], references: [placa], onDelete: Cascade, onUpdate: Cascade)
+  id              Int         @id @default(autoincrement())
+  data            DateTime    @default(now())
+  valor           Float
+  litros          Float
+  tipo            String
+  placa           String
+  veiculo         Veiculo     @relation(fields: [placa], references: [placa], onDelete: Cascade, onUpdate: Cascade)
 }
